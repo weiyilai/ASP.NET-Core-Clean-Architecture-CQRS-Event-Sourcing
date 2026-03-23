@@ -14,8 +14,6 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&metric=bugs)](https://sonarcloud.io/dashboard?id=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&metric=code_smells)](https://sonarcloud.io/dashboard?id=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing)
 
-[![Sparkline](https://stars.medv.io/jeangatto/ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing.svg)](https://stars.medv.io/jeangatto/ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing)
-
 About the repository:
 Open source project written in the latest version of ASP.NET Core, implementing the concepts of S.O.L.I.D, Clean Code,
 CQRS (Command Query Responsibility Segregation)
