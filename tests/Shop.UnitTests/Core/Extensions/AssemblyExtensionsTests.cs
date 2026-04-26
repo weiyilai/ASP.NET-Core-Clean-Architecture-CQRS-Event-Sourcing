@@ -1,4 +1,3 @@
-using System.Linq;
 using FluentAssertions;
 using Shop.Core.Extensions;
 using Xunit;

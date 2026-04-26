@@ -1,7 +1,5 @@
 using System;
-using Ardalis.Result;
 using FluentAssertions;
-using Shop.Core.SharedKernel;
 using Shop.Domain.Entities.CustomerAggregate;
 using Shop.Domain.Factories;
 using Shop.Domain.ValueObjects;

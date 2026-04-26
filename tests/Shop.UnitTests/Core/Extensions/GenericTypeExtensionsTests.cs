@@ -13,7 +13,7 @@ public class GenericTypeExtensionsTests
     public void IsDefault_ShouldReturnTrue_ForDefaultValue()
     {
         // Arrange
-        int value = 0;
+        var value = 0;
 
         // Act
         var result = value.IsDefault();
@@ -26,7 +26,7 @@ public class GenericTypeExtensionsTests
     public void IsDefault_ShouldReturnFalse_ForNonDefaultValue()
     {
         // Arrange
-        int value = 5;
+        var value = 5;
 
         // Act
         var result = value.IsDefault();

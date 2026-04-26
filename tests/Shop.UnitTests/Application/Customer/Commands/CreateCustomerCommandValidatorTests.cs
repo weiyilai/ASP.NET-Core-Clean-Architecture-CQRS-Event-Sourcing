@@ -1,4 +1,3 @@
-using FluentAssertions;
 using FluentValidation.TestHelper;
 using Shop.Application.Customer.Commands;
 using Xunit;
