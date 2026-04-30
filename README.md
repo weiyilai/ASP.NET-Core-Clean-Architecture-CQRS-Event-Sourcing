@@ -14,6 +14,16 @@
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&metric=bugs)](https://sonarcloud.io/dashboard?id=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&metric=code_smells)](https://sonarcloud.io/dashboard?id=ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing)
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=jeangatto%2FASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&type=date&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=jeangatto/ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=jeangatto/ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=jeangatto/ASP.NET-Core-Clean-Architecture-CQRS-Event-Sourcing&type=date&legend=top-left" />
+ </picture>
+</a>
+
 About the repository:
 Open source project written in the latest version of ASP.NET Core, implementing the concepts of S.O.L.I.D, Clean Code,
 CQRS (Command Query Responsibility Segregation)
