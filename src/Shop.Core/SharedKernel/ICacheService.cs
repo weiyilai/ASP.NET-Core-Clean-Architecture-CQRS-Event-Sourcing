@@ -32,9 +32,14 @@ public interface ICacheService
     Task RemoveAsync(string cacheKey);
 
     /// <summary>
-    /// Removes the items with the specified cache keys from the cache.
+    /// Removes the items with the specified cache keys from the cache (enumerable overload avoids params array allocation when callers already have a collection).
     /// </summary>
     /// <param name="cacheKeys">The keys of the items to remove from the cache.</param>
     /// <returns>A task representing the asynchronous removal operation.</returns>
+    Task RemoveAsync(IEnumerable<string> cacheKeys);
+
+    /// <summary>
+    /// Backwards-compatible params overload.
+    /// </summary>
     Task RemoveAsync(params string[] cacheKeys);
 }

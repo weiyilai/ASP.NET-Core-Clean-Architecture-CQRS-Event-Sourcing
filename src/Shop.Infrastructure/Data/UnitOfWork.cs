@@ -107,7 +107,14 @@ internal sealed class UnitOfWork(
     {
         // Publish each domain event using _mediator.
         if (domainEvents.Count > 0)
-            await Task.WhenAll(domainEvents.Select(@event => mediator.Publish(@event)));
+        {
+            var publishTasks = new Task[domainEvents.Count];
+
+            for (var i = 0; i < domainEvents.Count; i++)
+                publishTasks[i] = mediator.Publish(domainEvents[i]);
+
+            await Task.WhenAll(publishTasks);
+        }
 
         // Store the event stores using _eventStoreRepository.
         if (eventStores.Count > 0)

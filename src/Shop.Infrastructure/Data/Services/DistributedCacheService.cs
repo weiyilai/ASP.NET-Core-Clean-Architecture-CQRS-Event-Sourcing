@@ -78,12 +78,16 @@ internal sealed class DistributedCacheService(
         await distributedCache.RemoveAsync(cacheKey);
     }
 
-    public async Task RemoveAsync(params string[] cacheKeys)
+    public async Task RemoveAsync(IEnumerable<string> cacheKeys)
     {
+        if (cacheKeys == null)
+            return;
         foreach (var cacheKey in cacheKeys)
         {
             logger.LogInformation("----- Removed from {CacheServiceName}: '{CacheKey}'", CacheServiceName, cacheKey);
             await distributedCache.RemoveAsync(cacheKey);
         }
     }
+
+    public Task RemoveAsync(params string[] cacheKeys) => RemoveAsync((IEnumerable<string>)cacheKeys);
 }

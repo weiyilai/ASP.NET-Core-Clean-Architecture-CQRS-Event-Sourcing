@@ -80,8 +80,10 @@ internal sealed class MemoryCacheService(
         return Task.CompletedTask;
     }
 
-    public Task RemoveAsync(params string[] cacheKeys)
+    public Task RemoveAsync(IEnumerable<string> cacheKeys)
     {
+        if (cacheKeys == null)
+            return Task.CompletedTask;
         foreach (var cacheKey in cacheKeys)
         {
             logger.LogInformation("----- Removed from {CacheServiceName}: '{CacheKey}'", CacheServiceName, cacheKey);
@@ -90,4 +92,6 @@ internal sealed class MemoryCacheService(
 
         return Task.CompletedTask;
     }
+
+    public Task RemoveAsync(params string[] cacheKeys) => RemoveAsync((IEnumerable<string>)cacheKeys);
 }
