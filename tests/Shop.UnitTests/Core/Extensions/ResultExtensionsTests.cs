@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Ardalis.Result;
 using FluentAssertions;
 using Microsoft.AspNetCore.Http;
@@ -85,7 +84,7 @@ public class ResultExtensionsTests
     public void ToActionResult_GenericCreated_ReturnsCreatedResult()
     {
         // Arrange
-        var value = "payload";
+        const string value = "payload";
         var result = Result<string>.Created(value, location: "/test/1");
 
         // Act
@@ -95,7 +94,7 @@ public class ResultExtensionsTests
         action.Should().BeOfType<CreatedResult>();
         var created = (CreatedResult)action;
         created.Location.Should().Be("/test/1");
-        created.Value.Should().BeOfType(typeof(ApiResponse<string>));
+        created.Value.Should().BeOfType<ApiResponse<string>>();
         var api = (ApiResponse<string>)created.Value;
         api.Success.Should().BeTrue();
         api.StatusCode.Should().Be(StatusCodes.Status201Created);
@@ -106,7 +105,7 @@ public class ResultExtensionsTests
     public void ToActionResult_GenericOk_ReturnsOkObjectResult()
     {
         // Arrange
-        var value = "payload";
+        const string value = "payload";
         var result = Result<string>.Success(value);
 
         // Act
@@ -115,7 +114,7 @@ public class ResultExtensionsTests
         // Assert
         action.Should().BeOfType<OkObjectResult>();
         var ok = (OkObjectResult)action;
-        ok.Value.Should().BeOfType(typeof(ApiResponse<string>));
+        ok.Value.Should().BeOfType<ApiResponse<string>>();
         var api = (ApiResponse<string>)ok.Value;
         api.Success.Should().BeTrue();
         api.StatusCode.Should().Be(StatusCodes.Status200OK);

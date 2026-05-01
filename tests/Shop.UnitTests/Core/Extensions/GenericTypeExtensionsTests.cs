@@ -13,7 +13,7 @@ public class GenericTypeExtensionsTests
     public void IsDefault_ShouldReturnTrue_ForDefaultValue()
     {
         // Arrange
-        var value = 0;
+        const int value = 0;
 
         // Act
         var result = value.IsDefault();
@@ -26,7 +26,7 @@ public class GenericTypeExtensionsTests
     public void IsDefault_ShouldReturnFalse_ForNonDefaultValue()
     {
         // Arrange
-        var value = 5;
+        const int value = 5;
 
         // Act
         var result = value.IsDefault();
@@ -39,7 +39,7 @@ public class GenericTypeExtensionsTests
     public void GetGenericTypeName_ShouldReturnTypeName_ForNonGenericType()
     {
         // Arrange
-        var obj = "test";
+        const string obj = "test";
 
         // Act
         var result = obj.GetGenericTypeName();

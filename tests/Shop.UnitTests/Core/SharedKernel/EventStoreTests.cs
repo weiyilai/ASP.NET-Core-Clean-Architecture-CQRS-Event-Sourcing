@@ -14,8 +14,8 @@ public class EventStoreTests
     {
         // Arrange
         var aggregateId = Guid.NewGuid();
-        var messageType = "TestMessage";
-        var data = "TestData";
+        const string messageType = "TestMessage";
+        const string data = "TestData";
 
         // Act
         var eventStore = new EventStore(aggregateId, messageType, data);

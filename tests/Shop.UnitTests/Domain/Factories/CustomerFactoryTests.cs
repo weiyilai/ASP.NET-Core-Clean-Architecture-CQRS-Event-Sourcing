@@ -15,10 +15,10 @@ public class CustomerFactoryTests
     public void Create_WithValidEmail_ShouldReturnSuccessResult()
     {
         // Arrange
-        var firstName = "John";
-        var lastName = "Doe";
-        var gender = EGender.Male;
-        var email = "john.doe@example.com";
+        const string firstName = "John";
+        const string lastName = "Doe";
+        const EGender gender = EGender.Male;
+        const string email = "john.doe@example.com";
         var dateOfBirth = new DateTime(1990, 1, 1);
 
         // Act
@@ -39,10 +39,10 @@ public class CustomerFactoryTests
     public void Create_WithInvalidEmail_ShouldReturnErrorResult()
     {
         // Arrange
-        var firstName = "John";
-        var lastName = "Doe";
-        var gender = EGender.Male;
-        var email = "invalid-email";
+        const string firstName = "John";
+        const string lastName = "Doe";
+        const EGender gender = EGender.Male;
+        const string email = "invalid-email";
         var dateOfBirth = new DateTime(1990, 1, 1);
 
         // Act
@@ -58,9 +58,9 @@ public class CustomerFactoryTests
     public void Create_WithEmailValueObject_ShouldReturnCustomer()
     {
         // Arrange
-        var firstName = "John";
-        var lastName = "Doe";
-        var gender = EGender.Male;
+        const string firstName = "John";
+        const string lastName = "Doe";
+        const EGender gender = EGender.Male;
         var email = Email.Create("john.doe@example.com").Value;
         var dateOfBirth = new DateTime(1990, 1, 1);
 
