@@ -4,8 +4,8 @@ name: "CodeQL"
 on:
   push:
   pull_request:
-    types: [opened, synchronize, reopened]
-    branches: [main]
+    types: [ opened, synchronize, reopened ]
+    branches: [ main ]
     paths-ignore:
       - ".github/workflows/**"
       - "**/*.md"
@@ -23,13 +23,14 @@ jobs:
       security-events: write
 
     strategy:
-      fail-fast: false
       matrix:
-        language: ["csharp"]
+        include:
+          - language: csharp
+            build-mode: autobuild
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup .NET
         uses: actions/setup-dotnet@v4
@@ -40,6 +41,8 @@ jobs:
         uses: github/codeql-action/init@v4
         with:
           languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+          dependency-caching: true
 
       - name: Autobuild
         uses: github/codeql-action/autobuild@v4
