@@ -26,7 +26,7 @@ jobs:
       matrix:
         include:
           - language: csharp
-            build-mode: autobuild
+            build-mode: manual
 
     steps:
       - name: Checkout repository
