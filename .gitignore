@@ -363,3 +363,6 @@ MigrationBackup/
 *.sln.iml
 .idea/
 .run/*
+
+VS Code C# Dev Kit LSCache
+**/*.lscache
