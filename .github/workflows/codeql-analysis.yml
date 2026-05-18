@@ -35,6 +35,8 @@ jobs:
         with:
           languages: csharp
           build-mode: manual
+          analysis-kinds: 'code-scanning, code-quality'
+          dependency-caching: true
 
       - name: Restore dependencies
         run: dotnet restore Shop.slnx
