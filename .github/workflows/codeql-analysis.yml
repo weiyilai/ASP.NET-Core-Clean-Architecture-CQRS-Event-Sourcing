@@ -2,14 +2,13 @@ name: "CodeQL Scan - C#"
 
 on:
   push:
-    branches: [ main ]
-    paths:
-      - '**/*.cs'
-      - '**/*.csproj'
   pull_request:
-    branches: [ main ]
-  schedule:
-    - cron: '0 8 * * 4'
+    types: [opened, synchronize, reopened]
+    branches: [main]
+    paths-ignore:
+      - ".github/workflows/**"
+      - "**/*.md"
+      - "**/*.yml"
 
 jobs:
   codeql:
