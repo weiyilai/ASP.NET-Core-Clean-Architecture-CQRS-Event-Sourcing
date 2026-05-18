@@ -35,7 +35,6 @@ jobs:
         with:
           languages: csharp
           build-mode: manual
-          packs: codeql/csharp-all@latest
 
       - name: Restore dependencies
         run: dotnet restore Shop.slnx
