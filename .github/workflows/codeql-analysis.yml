@@ -45,9 +45,9 @@ jobs:
 
       - name: Autobuild fallback
         if: failure()
-        uses: github/codeql-action/autobuild@v4.31.2
+        uses: github/codeql-action/autobuild@v4.37.1
 
       - name: Run CodeQL analysis
-        uses: github/codeql-action/analyze@v4.31.2
+        uses: github/codeql-action/analyze@v4.37.1
         with:
           category: "security"
